@@ -6,115 +6,50 @@
 }
 body {
    background-color: #222327;
-   display: flex;
-   justify-content: end;
+}
+header{
+    background-color: #14141a;
+    padding: 20px;
 }
 
 h1{
-    margin-right: 11.4em;
     margin-top: 1em;
     color:#fff;
 }
 
-.nav_bar{
-    margin-top: 5em;
-    margin-right: 3em;
-    width: 400px;
-    height: 70px;
-    background-color: #fff;
-    position: relative;
+.nav-bar{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius:10px ;
 }
 
-
-.nav_bar ul{
-   display: flex;
-    width: 350px;
+ul{
+    display: flex;
+    justify-content: flex-end;
 }
 
-.nav_bar ul li{
-    position: relative;
+a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+li{
+    
     list-style: none;
-    width: 70px;
-    height: 70px;
-    z-index: 1;
+    padding: 10px;
+    margin-top: -2em;
 }
 
-.nav_bar ul li a{
-    position: relative;
+.icon{
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-    font-weight: 500;
+    padding: 10px;
 }
 
-.nav_bar ul li a .icon{
-    position: relative;
-    display: block;
-    line-height: 75px;
-    font-size: 1.5em;
-    text-align: center;
-    transition: 0.5s;
-    color: black;
-}
-
-.nav_bar ul li.active a .icon{
-    transform: translateY(-32px);
-}
-
-.nav_bar ul li a .text{
-    position: absolute;
-    color: black;
-    font-weight: 400;
-    font-size: 0.75em;
-    letter-spacing: 0.05em;
-    transition: 0.5s;
-    opacity: 0;
-    transform: translateY(20px);
-}
-
-.nav_bar ul li.active a .text{
-    opacity: 1;
-    transform: translateY(10px);
-}
-
-.indicator{
-    position: absolute;
-    top: -50%;
-    width: 70px;
-    height: 70px;
-    background: #29fd53;
-    border-radius: 50%;
-    border: 6px solid  #222327;
-    transition: 0.5s;
-}
-
-.indicator::before{
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: -22px;
-    width: 20px;
-    height: 20px;
-    background: transparent;
-    border-top-right-radius: 20px;
-   box-shadow: 0px -10px 0 0 #222327;
-}
-
-.indicator::after{
-    content: '';
-    position: absolute;
-    top: 50%;
-    right: -22px;
-    width: 20px;
-    height: 20px;
-    background: transparent;
-    border-top-left-radius: 20px;
-   box-shadow: 0px -10px 0 0 #222327;
+.container{
+    display: grid;
+    grid-template-columns:minmax(100px, max-content)
+                        repeat(auto-fill, 200px) 20%;
+    color: white;
+    padding: 10px;
 }
