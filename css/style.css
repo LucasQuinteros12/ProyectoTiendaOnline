@@ -17,11 +17,7 @@ h1{
     color:#fff;
 }
 
-.nav-bar{
-    display: flex;
-}
-
-ul{
+.nav-ul{
     display: flex;
     justify-content: flex-end;
 }
@@ -31,13 +27,25 @@ a{
     color: white;
     font-weight: bold;
     font-size: 1.1em;
+    transition: 500ms ease;
 }
 
-li{
+a:hover{
+    color: black;
+}
+
+.list{
     
     list-style: none;
     padding: 10px;
     margin-top: -2em;
+    transition: 500ms ease;
+}
+
+.list:hover{
+    background-color: #fff;
+    border-radius: 20px;
+
 }
 
 .icon{
@@ -52,4 +60,25 @@ li{
                         repeat(auto-fill, 200px) 20%;
     color: white;
     padding: 10px;
+}
+
+ul{
+    display: flex;
+    color: white;
+    flex-wrap: wrap;
+}
+
+li{
+    padding: 10px;
+    list-style: none;
+}
+
+img{
+    display: block;
+    width: 10em;
+}
+
+span{
+    display: flex;
+    line-height: 35px;
 }

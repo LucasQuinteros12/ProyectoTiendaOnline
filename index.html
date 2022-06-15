@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous"> 
     <link rel="stylesheet" href="css/style.css">
     <title>Tienda Online</title>
 </head>
@@ -14,8 +15,8 @@
     <header>
         <h1>Tienda Online</h1>
 
-        <nav class="nav_bar">
-            <ul>
+        <nav class="nav-bar">
+            <ul class="nav-ul">
                 <li class="list">
                     <a href="#">
                         <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
@@ -50,14 +51,27 @@
         </nav>
     </header>
 
-    
-    
+    <section class="container-fluid mt-5" id="container-buscador">
+        <input type="text" id="formulario" class="form-control my-2" placeholder="Buscar...">
+        <button class="btn btn-info mb-2" id="boton">Buscar</button>
 
+        <ul id="resultado">
+            <li><img src="/img/auricularMarvo.jpg" alt="auricular">Auricular Marvo <span>$ 4000</span></li>
+            <li><img src="/img/bicicleta.png" alt="bicicleta"> Bicicleta Venzo <span> $ 40000</span></li>
+            <li><img src="/img/kumara552.png" alt="Teclado"> Teclado Kumara <span>$ 4200</span></li>
+            <li><img src="/img/monitor.png" alt="monitor"> Monitor 32' <span>$ 18000</span></li>
+            <li><img src="/img/mouseInvader.png" alt="mouse"> Mouse Invader <span> $ 2500</span></li>
+            <li><img src="/img/sillaGamer.png" alt="silla"> Silla Gamer <span> $ 50000</span></li>
+        </ul>
+    </section>
+    
+   
    
 
     <script src="js/main.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
 </body>
 
 </html>
