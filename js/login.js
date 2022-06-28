@@ -60,4 +60,6 @@ function anchoPagina(){
         formularioRegister.style.display = "none";
         containerLR.style.left = "0px";
     }
+
+  
 }

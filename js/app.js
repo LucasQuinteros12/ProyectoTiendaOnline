@@ -22,12 +22,14 @@ buscador.addEventListener('input', (e)=>{
 
 
 //loading
+function loading() {
+    contenedorProductos.innerHTML = '<img class= "loading"src="https://i.gifer.com/T04A.gif">'
 
-contenedorProductos.innerHTML = '<img class= "loading"src="https://i.gifer.com/T04A.gif">'
+    setTimeout(() => {
+        mostrarProductos(stockProductos)
+    }, 3000)
+}
 
-setTimeout(() => {
-    mostrarProductos(stockProductos)
-}, 3000)
 
 
 //Logica
@@ -94,15 +96,13 @@ function actualizarCarrito(){
 
 function recuperar(){
     
-    let recuperarLS = JSON.parse(localStorage.getItem('carrito'))
+    let recuperarLS = JSON.parse(localStorage.getItem('carrito')) ||[]
     
-    if(recuperarLS){
-        for (const elemento of recuperarLS) {
-            mostrarCarrito(elemento)
-            carritoDeCompras.push(elemento)
-            actualizarCarrito()
-        }
+    for (const elemento of recuperarLS) {
+        mostrarCarrito(elemento)
+        carritoDeCompras.push(elemento)
+        actualizarCarrito()
     }
 }
-
+loading();
 recuperar();
