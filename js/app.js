@@ -55,6 +55,15 @@ function mostrarProductos(){
         contenedorProductos.appendChild(div)
         let btnAgregar = document.getElementById(`boton${el.id}`)
         btnAgregar.addEventListener('click', ()=>{
+            
+            Toastify({
+                text: "Producto añadido",
+                duration: 3000,
+                gravity: 'bottom',
+                style: {
+                    background: 'black'
+                }
+            }).showToast();
             agregarAlCarrito(el.id)
         })
     })
@@ -86,6 +95,16 @@ function mostrarCarrito(productoAgregar){
         carritoDeCompras = carritoDeCompras.filter(ele => ele.id !== productoAgregar.id)
         actualizarCarrito()
         localStorage.setItem('carrito', JSON.stringify(carritoDeCompras))
+
+        Toastify({
+            text: "Producto Eliminado",
+            duration: 3000,
+            gravity: 'bottom',
+            style: {
+                background: 'black'
+            }
+        }).showToast();
+
     })
 }
 

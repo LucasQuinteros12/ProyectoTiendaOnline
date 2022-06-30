@@ -30,6 +30,17 @@ function register() {
 anchoPagina();
 document.getElementById("btn-registrarse").addEventListener("click", register);
 
+btnResgistro.addEventListener('click', ()=>{
+  Toastify({
+    text: "Registrado Correctamente",
+    duration: 3000,
+    gravity: 'bottom',
+    style: {
+        background: 'black'
+    }
+}).showToast();
+
+})
 function iniciarSesion() {
   if (window.innerWidth > 850) {
     formularioRegister.style.display = "none";
